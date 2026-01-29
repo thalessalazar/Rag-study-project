@@ -1,0 +1,34 @@
+{
+  "name": "rag-study",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "rag"
+  ],
+  "homepage": "https://github.com/thalessalazar/Rag-study-project#readme",
+  "bugs": {
+    "url": "https://github.com/thalessalazar/Rag-study-project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thalessalazar/Rag-study-project.git"
+  },
+  "license": "ISC",
+  "author": "Thales Salazar",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "@langchain/community": "^1.1.9",
+    "@langchain/core": "^1.1.17",
+    "dotenv": "^16.6.1",
+    "express": "^5.2.1",
+    "pdf-parser": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.1.0",
+    "@types/pdf-parse": "^1.1.5",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
