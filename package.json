@@ -23,6 +23,7 @@
   "dependencies": {
     "@langchain/community": "^1.1.9",
     "@langchain/core": "^1.1.17",
+    "@qdrant/js-client-rest": "^1.16.2",
     "dotenv": "^16.6.1",
     "express": "^5.2.1",
     "pdf-parser": "^1.0.5"
