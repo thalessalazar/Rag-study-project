@@ -1,0 +1,9 @@
+services:
+  qdrant:
+    image: qdrant/qdrant
+    container_name: qdrant
+    platform: linux/amd64
+    ports:
+      - 6333:6333
+    volumes:
+      - ./data/qdrant:/qdrant/storage
