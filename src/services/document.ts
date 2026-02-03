@@ -4,20 +4,15 @@ import {v4 as uuidv4} from 'uuid';
 import { embeddings } from "./openai.js";
 import { qdrantClient } from "./qdrant.js";
 import { config } from "../config.js";
+import type { UploadResponse } from "../types.js";
 
-interface UploadResponse {
-    success: boolean;
-    documentId: string;
-    chunksCount: number;
-    message: string;
-}
 
 const textSplitters = new RecursiveCharacterTextSplitter({
     chunkSize: 1000,
     chunkOverlap: 200,
 });
 
-export async function process(
+export async function processDocument(
     filePath: string,
     fileName: string
 ): Promise<UploadResponse> {

@@ -5,22 +5,22 @@ export const qdrantClient = new QdrantClient({
     url: config.qdrant.url,
 });
 
-export async function iniQdrantCollection(collectionName: string) {
+export async function initQdrantCollection() {
     const collections = await qdrantClient.getCollections();
     const existCollection = collections.collections.find( collection => collection.name = config.qdrant.collectionName )
 
     if(!existCollection) {
-        await qdrantClient.createCollection(collectionName, {
+        await qdrantClient.createCollection(config.qdrant.collectionName, {
             vectors: {
                 size: 1536,
                 distance: 'Cosine',
             }
         });
 
-        console.log(`Collection ${collectionName} created successfully`);
+        console.log(`Collection ${config.qdrant.collectionName} created successfully`);
         return;
     } 
 
-    console.log(`Collection ${collectionName} already exists`);
+    console.log(`Collection ${config.qdrant.collectionName} already exists`);
     return;
 }
